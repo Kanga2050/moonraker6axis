@@ -518,7 +518,7 @@ class PanelDue:
         self.last_printer_state = self._get_printer_status()
         response['status'] = self.last_printer_state
         response['babystep'] = round(
-            gcode_move.get('homing_origin', [0., 0., 0., 0.])[2], 3
+            gcode_move.get('homing_origin', [0., 0., 0., 0., 0., 0., 0.])[2], 3
         )
 
         # Current position
@@ -563,7 +563,7 @@ class PanelDue:
                     obj_height = self.file_metadata.get('object_height')
                     if obj_height:
                         cur_height: float = gcode_move.get(
-                            'gcode_position', [0., 0., 0., 0.]
+                            'gcode_position', [0., 0., 0., 0., 0., 0., 0.]
                         )[2]
                         hpct = min(1., cur_height / obj_height)
                         times_left.append(int(est_time - est_time * hpct))

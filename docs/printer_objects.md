@@ -37,9 +37,9 @@ contains a message specific to the current printers state.
     "extrude_factor": 1.0,
     "absolute_coordinates": true,
     "absolute_extrude": false,
-    "homing_origin": [0.0, 0.0, 0.0, 0.0],
-    "position": [0.0, 0.0, 0.0, 0.0],
-    "gcode_position": [0.0, 0.0, 0.0, 0.0]
+    "homing_origin": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+    "position": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+    "gcode_position": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
 }
 ```
 The `gcode_move` object reports the current gcode state:
@@ -72,7 +72,7 @@ The `gcode_move` object reports the current gcode state:
     "print_time": 0.0,
     "estimated_print_time": 0.0,
     "extruder": "extruder",
-    "position": [0.0, 0.0, 0.0, 0.0],
+    "position": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
     "max_velocity": 500.0,
     "max_accel": 3000.0,
     "max_accel_to_decel": 1500.0,
